@@ -6,10 +6,9 @@
     - [Configure S7 Connector](#configure-s7-connector)
   - [Configure Data Service](#configure-data-service)
     - [Configure the adapter](#configure-the-adapter)
-    - [Configure an asset with variables](#configure-an-asset)
+    - [Configure an asset with variables](#configure-an-asset-with-variables)
     - [Configure an aspect](#configure-an-aspect)
-	
-	
+		
 ## Configure PLC Connection
 
 To read data from the PLC and provide the data, we will use S7 Connector to establish connection with the PLC via OPC UA.
@@ -26,9 +25,9 @@ In your IEM open the Databus and launch the configurator.
 Add a user with this topic:
 `"ie/#"`
 
-![ie_databus_user](docs/graphics/IE_Databus_User.PNG)
+![ie_databus_user](graphics/IE_Databus_User.PNG)
 
-![ie_databus](docs/graphics/IE_Databus.PNG)
+![ie_databus](graphics/IE_Databus.PNG)
 
 Deploy the configuration.
 
@@ -38,15 +37,15 @@ In your IEM open the S7 Connector and launch the configurator.
 
 Add a data source:
 
-![S7 Connector Data Source](docs/graphics/S7_Connector_Data_Source.PNG)
+![S7 Connector Data Source](graphics/S7_Connector_Data_Source.PNG)
 
 Add needed tags:
 
-![s7_connector_config](docs/graphics/S7_Connector_Configuration.PNG)
+![s7_connector_config](graphics/S7_Connector_Configuration.PNG)
 
 Edit the settings:
 
-![s7_connector_settings](docs/graphics/S7_Connector_Settings.PNG)
+![s7_connector_settings](graphics/S7_Connector_Settings.PNG)
 
 Hint: Username and password should be the same for all system apps, e.g. "edge" / "edge".
 
@@ -64,11 +63,11 @@ On the left bar click the icon "Adapters" and choose the SIMATIC S7 Connector (M
 
 Click the edit icon on the right to open the adapter configuration.
 
-![data_service_adapter](docs/graphics/Data_Service_Adapter.PNG)
+![data_service_adapter](graphics/Data_Service_Adapter.PNG)
 
 Add the missing entries for username and password (again "edge"/"edge") and save it.
 
-![data_service_adapter_config](docs/graphics/Data_Service_Adapter_Config.PNG)
+![data_service_adapter_config](graphics/Data_Service_Adapter_Config.PNG)
 
 Hint: Sometimes the Data Service app must be restarted, to take over the adapter changes.
 
@@ -78,21 +77,20 @@ On the left bar click the icon "Assets & Connectivity". For the "edge" asset you
 
 Choose "Create first variable" or "Add variable" on the right side to add tags.
 
-![data_service_assets](docs/graphics/Data_Service_Assets.PNG)
+![data_service_assets](graphics/Data_Service_Assets.PNG)
 
-![data_service_variable](docs/graphics/Data_Service_Variable.PNG)
+![data_service_variable](graphics/Data_Service_Variable.PNG)
 
 To change the storage time period, klick on the link below the asset:
 
-![data_service_retention](docs/graphics/Data_Service_Retention.PNG)
+![data_service_retention](graphics/Data_Service_Retention.PNG)
 
 ### Configure an aspect
 
 Choose the register "Aspects" to create a new aspect by clicking "Create first aspect" or "Add aspect".
 
-![data_service_aspect](docs/graphics/Data_Service_Aspect.PNG)
+![data_service_aspect](graphics/Data_Service_Aspect.PNG)
 
 Hint: An aspect can include several variables, but each variable can only be assigned to one aspect.
 
-![data_service_aspects](docs/graphics/Data_Service_Aspects.PNG)
-
+![data_service_aspects](graphics/Data_Service_Aspects.PNG)
