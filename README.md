@@ -52,13 +52,13 @@ By creating an aspect, variables can be grouped to a logical unit.
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.0.10
-  - IE Databus V1.0.11
-  - IE Databus Configurator V1.0.44
-  - S7 Connector V1.0.22
-  - S7 Connector Configurator V1.0.9
-  - Data Service V1.0.9
-- Industrial Edge Device V 1.0.0-34
+- Industrial Edge Management V1.1.14 (1.1.0-48)
+  - IE Databus V1.1.15
+  - IE Databus Configurator V1.1.24
+  - S7 Connector V1.1.18
+  - S7 Connector Configurator V1.1.18
+  - Data Service V1.1.3
+- Industrial Edge Device V 1.1.0-54
 - TIA Portal V16
 - S7-PLCSIM Advanced V3.0
 

@@ -59,15 +59,21 @@ Hint: If an error screen appears saying "...unauthorized...", please restart the
 
 ### Configure the adapter
 
-On the left bar click the icon "Adapters" and choose the SIMATIC S7 Connector (MQTT).
+On the left bar click the icon "Adapters" and choose the SIMATIC S7 Connector.
 
 Click the edit icon on the right to open the adapter configuration.
 
-![data_service_adapter](graphics/Data_Service_Adapter.PNG)
+Edit the Broker URL to `"tcp://ie-databus:1883"`.
 
-Add the missing entries for username and password (again "edge"/"edge") and save it.
+Add the missing entries for username and password (again "edge"/"edge").
 
-![data_service_adapter_config](graphics/Data_Service_Adapter_Config.PNG)
+Set the status to 'Active' and save your configuration.
+
+![data_service_adapter_config](graphics/Data_Service_Adapter_Config.png)
+
+The SIMATIC S7 Connector should now be activated and connected to the Data Service.
+
+![data_service_adapter](graphics/Data_Service_Adapter.png)
 
 Hint: Sometimes the Data Service app must be restarted, to take over the adapter changes.
 
