@@ -48,6 +48,7 @@ Edit the settings:
 ![s7_connector_settings](graphics/S7_Connector_Settings.PNG)
 
 Hint: Username and password should be the same for all system apps, e.g. "edge" / "edge".
+
 Hint: V1.2 only supports "bulk publish" anymore. 
 
 Deploy and start the project.
@@ -76,7 +77,6 @@ The SIMATIC S7 Connector should now be activated and connected to the Data Servi
 
 ![data_service_adapter](graphics/Data_Service_Adapter.png)
 
-Hint: Sometimes the Data Service app must be restarted, to take over the adapter changes.
 
 ### Configure an asset with variables
 
