@@ -52,13 +52,13 @@ By creating an aspect, variables can be grouped to a logical unit.
 
 ### Used components
 
-- Industrial Edge Management V1.1.14 (1.1.0-48)
-  - IE Databus V1.1.15
-  - IE Databus Configurator V1.1.24
-  - S7 Connector V1.1.18
-  - S7 Connector Configurator V1.1.18
-  - Data Service V1.1.3
-- Industrial Edge Device V 1.1.0-54
+- Industrial Edge Management V1.2.0-36 / V1.2.14
+  - IE Databus V1.2.16
+  - IE Databus Configurator V1.2.23
+  - S7 Connector V1.2.26
+  - S7 Connector Configurator V1.2.32
+  - Data Service V1.1.1
+- Industrial Edge Device V 1.2.0-56
 - TIA Portal V16
 - S7-PLCSIM Advanced V3.0
 
@@ -66,7 +66,7 @@ By creating an aspect, variables can be grouped to a logical unit.
 
 The used TIA Portal project can be found in the [miscellenous repository](https://github.com/industrial-edge/miscellenous) under the following name and is also used for several further application examples:
 
-- [tia-tank-application-20201028.7z](https://github.com/industrial-edge/miscellenous/blob/main/tia-tank-application-20201028.7z)
+- [tia-tank-application-20210421.7z](https://github.com/industrial-edge/miscellenous/blob/main/tia-tank-application-20210421.7z)
 
 ## Configuration steps
 
