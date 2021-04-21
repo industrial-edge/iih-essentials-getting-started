@@ -48,6 +48,7 @@ Edit the settings:
 ![s7_connector_settings](graphics/S7_Connector_Settings.PNG)
 
 Hint: Username and password should be the same for all system apps, e.g. "edge" / "edge".
+Hint: V1.2 only supports "bulk publish" anymore. 
 
 Deploy and start the project.
 
