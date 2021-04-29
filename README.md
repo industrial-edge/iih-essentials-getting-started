@@ -68,11 +68,15 @@ The used TIA Portal project can be found in the [miscellenous repository](https:
 
 - [tia-tank-application-20210421.7z](https://github.com/industrial-edge/miscellenous/blob/main/tia-tank-application-20210421.7z)
 
+The corresponding documentation can be found here:
+- [tank-application.pdf](https://github.com/industrial-edge/miscellaneous/blob/main/tank-application.pdf)
+
+
 ## Configuration steps
 
 You can find the further information about the following steps in the [docs](docs/Installation.md)
 - Configure PLC Connection (Databus, S7 Connector)
-- Configure Configure Data Service
+- Configure Data Service
 
 ## Usage
 

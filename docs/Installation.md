@@ -61,11 +61,18 @@ Hint: If an error screen appears saying "...unauthorized...", please restart the
 
 ### Configure the adapter
 
-On the left bar click the icon "Adapters" and choose the SIMATIC S7 Connector.
+The Data Service provides adapters for the following connectors:
+
+- Ethernet IP Connector
+- Modbus TCP Connector
+- Profinet IO Connector
+- SIMATIC S7 Connector
+
+On the left bar click the icon "Adapters" and choose the adapter you want to use.
 
 Click the edit icon on the right to open the adapter configuration.
 
-Edit the Broker URL to `"tcp://ie-databus:1883"`.
+The Broker URL should be prefilled with `"tcp://ie-databus:1883"`.
 
 Add the missing entries for username and password (again "edge"/"edge").
 
@@ -73,7 +80,7 @@ Set the status to 'Active' and save your configuration.
 
 ![data_service_adapter_config](graphics/Data_Service_Adapter_Config.png)
 
-The SIMATIC S7 Connector should now be activated and connected to the Data Service.
+The adapter (here SIMATIC S7 Connector) should now be activated and connected to the Data Service.
 
 ![data_service_adapter](graphics/Data_Service_Adapter.png)
 
@@ -85,6 +92,8 @@ On the left bar click the icon "Assets & Connectivity". For the "edge" asset you
 Choose "Create first variable" or "Add variable" on the right side to add tags.
 
 ![data_service_assets](graphics/Data_Service_Assets.PNG)
+
+Choose an proper adapter that is activated and select a tag provided by that adapter.
 
 ![data_service_variable](graphics/Data_Service_Variable.PNG)
 
