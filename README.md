@@ -57,7 +57,7 @@ By creating an aspect, variables can be grouped to a logical unit.
   - IE Databus Configurator V1.2.23
   - S7 Connector V1.2.26
   - S7 Connector Configurator V1.2.32
-  - Data Service V1.1.1
+  - Data Service V1.2.0
 - Industrial Edge Device V 1.2.0-56
 - TIA Portal V16
 - S7-PLCSIM Advanced V3.0
