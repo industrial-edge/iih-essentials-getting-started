@@ -57,18 +57,24 @@ Deploy and start the project.
 
 In your IED Web UI open the app Data Service.
 
-Hint: If an error screen appears saying "...unauthorized...", please restart the Data Service app, wait a moment and try again to open it.
-
 ### Configure the adapter
 
 The Data Service provides adapters for the following connectors:
 
-- Ethernet IP Connector
-- Modbus TCP Connector
-- Profinet IO Connector
-- SIMATIC S7 Connector
+- Ethernet IP Connector (MQTT)
+- Modbus TCP Connector (MQTT)
+- Profinet IO Connector (MQTT)
+- SIMATIC S7 Connector (MQTT)
+- Hmi Runtime (Open Pipe Path)
+- System Info (MQTT)
 
-On the left bar click the icon "Adapters" and choose the adapter you want to use.
+The adapter "System Info" is predefined and offers different variables, e.g. TotalHeapSize, TotalAvailableSize, UsedHeapSize, WriteQueueLength, WriteQueueValueCount, WriteSpeed, WriteInsertCount, WriteRequestCount, DatabaseSize.
+
+It is also possible to add a **self-developed** adapters by choosing the "plus" icon. This adapter must be based on the MQTT protocol.
+
+---
+
+To connect to an adapter, click the icon "Adapters" on the left bar and choose the adapter you want to use.
 
 Click the edit icon on the right to open the adapter configuration.
 
