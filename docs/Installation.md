@@ -8,7 +8,7 @@
     - [Configure the adapter](#configure-the-adapter)
     - [Configure an asset with variables](#configure-an-asset-with-variables)
     - [Configure an aspect](#configure-an-aspect)
-		
+
 ## Configure PLC Connection
 
 To read data from the PLC and provide the data, we will use S7 Connector to establish connection with the PLC via OPC UA.
@@ -49,7 +49,7 @@ Edit the settings:
 
 Hint: Username and password should be the same for all system apps, e.g. "edge" / "edge".
 
-Hint: V1.2 only supports "bulk publish" anymore. 
+Hint: V1.2 only supports "bulk publish" anymore.
 
 Deploy and start the project.
 
@@ -59,7 +59,7 @@ In your IED Web UI open the app Data Service.
 
 ### Configure the adapter
 
-The Data Service provides adapters for the following connectors:
+Click the icon "Adapters" on the left bar. The Data Service provides adapters for the following connectors:
 
 - Ethernet IP Connector (MQTT)
 - Modbus TCP Connector (MQTT)
@@ -68,21 +68,9 @@ The Data Service provides adapters for the following connectors:
 - Hmi Runtime (Open Pipe Path)
 - System Info (MQTT)
 
-The adapter "System Info" is predefined and offers different variables, e.g. TotalHeapSize, TotalAvailableSize, UsedHeapSize, WriteQueueLength, WriteQueueValueCount, WriteSpeed, WriteInsertCount, WriteRequestCount, DatabaseSize.
+The adapter "System Info" is predefined and offers different variables, e.g. TotalHeapSize, TotalAvailableSize, UsedHeapSize, WriteQueueLength, WriteQueueValueCount, WriteSpeed, WriteInsertCount, WriteRequestCount, DatabaseSize. It is also possible to add a **self-developed** adapters by choosing the "plus" icon. This adapter must be based on the MQTT protocol.
 
-It is also possible to add a **self-developed** adapters by choosing the "plus" icon. This adapter must be based on the MQTT protocol.
-
----
-
-To connect to an adapter, click the icon "Adapters" on the left bar and choose the adapter you want to use.
-
-Click the edit icon on the right to open the adapter configuration.
-
-The Broker URL should be prefilled with `"tcp://ie-databus:1883"`.
-
-Add the missing entries for username and password (again "edge"/"edge").
-
-Set the status to 'Active' and save your configuration.
+To connect to an adapter choose the adapter you want to use. Click the edit icon on the right to open the adapter configuration. The Broker URL should be prefilled with `"tcp://ie-databus:1883"`. Add the missing entries for username and password (again "edge"/"edge"). Set the status to 'Active' and save your configuration.
 
 ![data_service_adapter_config](graphics/Data_Service_Adapter_Config.png)
 
@@ -90,18 +78,15 @@ The adapter (here SIMATIC S7 Connector) should now be activated and connected to
 
 ![data_service_adapter](graphics/Data_Service_Adapter.png)
 
-
 ### Configure an asset with variables
 
-On the left bar click the icon "Assets & Connectivity". For the "edge" asset you can add child assets as needed.
-
-Choose "Create first variable" or "Add variable" on the right side to add tags.
+On the left bar click the icon "Assets & Connectivity". For the "edge" asset you can add child assets as needed. Click "Create first variable" or "Add variable" / "Add multiple variables" on the right side to add one or more tags. Choose an proper adapter that is activated and select a tag provided by that adapter.
 
 ![data_service_assets](graphics/Data_Service_Assets.PNG)
 
-Choose an proper adapter that is activated and select a tag provided by that adapter.
+Add tags:
 
-![data_service_variable](graphics/Data_Service_Variable.PNG)
+![data_service_variable](graphics/Data_Service_Variable.PNG)    ![data_service_multiple variables](graphics/Data_Service_MultipleVariables.PNG)
 
 To change the storage time period, klick on the link below the asset:
 
