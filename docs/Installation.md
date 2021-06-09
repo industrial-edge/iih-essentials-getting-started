@@ -68,7 +68,7 @@ Click the icon "Adapters" on the left bar. The Data Service provides adapters fo
 - Hmi Runtime (Open Pipe Path)
 - System Info (MQTT)
 
-The adapter "System Info" is predefined and offers different variables, e.g. TotalHeapSize, TotalAvailableSize, UsedHeapSize, WriteQueueLength, WriteQueueValueCount, WriteSpeed, WriteInsertCount, WriteRequestCount, DatabaseSize. It is also possible to add a **self-developed** adapters by choosing the "plus" icon. This adapter must be based on the MQTT protocol.
+The adapter **"System Info"** is predefined and offers different variables, e.g. TotalHeapSize, TotalAvailableSize, UsedHeapSize, WriteQueueLength, WriteQueueValueCount, WriteSpeed, WriteInsertCount, WriteRequestCount, DatabaseSize. It is also possible to add a **self-developed** adapters by choosing the "plus" icon. This adapter must be based on the MQTT protocol.
 
 To connect to an adapter choose the adapter you want to use. Click the edit icon on the right to open the adapter configuration. The Broker URL should be prefilled with `"tcp://ie-databus:1883"`. Add the missing entries for username and password (again "edge"/"edge"). Set the status to 'Active' and save your configuration.
 
@@ -86,11 +86,12 @@ On the left bar click the icon "Assets & Connectivity". For the "edge" asset you
 
 ![data_service_assets](graphics/Data_Service_Assets.PNG)
 
-Using the variables preview, you can immediately check whether data is transmitted from the IE Databus:
+Using the **variables preview**, you can immediately check whether data is transmitted from the IE Databus:
 
 ![data_service_assets](graphics/Data_Service_Preview.PNG)
 
-To change the storage time period, klick on the link below the asset to set the time:
+The **data storage period** can be set individually for each asset. The data is deleted from the memory after this time.
+To change the this time period, klick on the link below the asset:
 
 ![data_service_retention](graphics/Data_Service_Retention.PNG)
 
