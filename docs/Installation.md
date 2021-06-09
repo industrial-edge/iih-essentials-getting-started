@@ -8,7 +8,7 @@
     - [Configure the adapter](#configure-the-adapter)
     - [Configure an asset with variables](#configure-an-asset-with-variables)
     - [Configure an aspect](#configure-an-aspect)
-		
+
 ## Configure PLC Connection
 
 To read data from the PLC and provide the data, we will use S7 Connector to establish connection with the PLC via OPC UA.
@@ -49,7 +49,7 @@ Edit the settings:
 
 Hint: Username and password should be the same for all system apps, e.g. "edge" / "edge".
 
-Hint: V1.2 only supports "bulk publish" anymore. 
+Hint: V1.2 only supports "bulk publish" anymore.
 
 Deploy and start the project.
 
@@ -57,26 +57,20 @@ Deploy and start the project.
 
 In your IED Web UI open the app Data Service.
 
-Hint: If an error screen appears saying "...unauthorized...", please restart the Data Service app, wait a moment and try again to open it.
-
 ### Configure the adapter
 
-The Data Service provides adapters for the following connectors:
+Click the icon "Adapters" on the left bar. The Data Service provides adapters for the following connectors:
 
-- Ethernet IP Connector
-- Modbus TCP Connector
-- Profinet IO Connector
-- SIMATIC S7 Connector
+- Ethernet IP Connector (MQTT)
+- Modbus TCP Connector (MQTT)
+- Profinet IO Connector (MQTT)
+- SIMATIC S7 Connector (MQTT)
+- Hmi Runtime (Open Pipe Path)
+- System Info (MQTT)
 
-On the left bar click the icon "Adapters" and choose the adapter you want to use.
+The adapter **"System Info"** is predefined and offers different variables, e.g. TotalHeapSize, TotalAvailableSize, UsedHeapSize, WriteQueueLength, WriteQueueValueCount, WriteSpeed, WriteInsertCount, WriteRequestCount, DatabaseSize. It is also possible to add a **self-developed** adapters by choosing the "plus" icon. This adapter must be based on the MQTT protocol.
 
-Click the edit icon on the right to open the adapter configuration.
-
-The Broker URL should be prefilled with `"tcp://ie-databus:1883"`.
-
-Add the missing entries for username and password (again "edge"/"edge").
-
-Set the status to 'Active' and save your configuration.
+To connect to an adapter choose the adapter you want to use. Click the edit icon on the right to open the adapter configuration. The Broker URL should be prefilled with `"tcp://ie-databus:1883"`. Add the missing entries for username and password (again "edge"/"edge"). Set the status to 'Active' and save your configuration.
 
 ![data_service_adapter_config](graphics/Data_Service_Adapter_Config.png)
 
@@ -84,24 +78,26 @@ The adapter (here SIMATIC S7 Connector) should now be activated and connected to
 
 ![data_service_adapter](graphics/Data_Service_Adapter.png)
 
-
 ### Configure an asset with variables
 
-On the left bar click the icon "Assets & Connectivity". For the "edge" asset you can add child assets as needed.
+An asset is a digital representation of a machine or automation system with one or more automation units (e.g. PLC). The data that describes an asset is collected and transferred. The data is then made available for further processing and evaluation.
 
-Choose "Create first variable" or "Add variable" on the right side to add tags.
+On the left bar click the icon "Assets & Connectivity". For the "edge" asset you can add child assets as needed. Click "Create first variable" or "Add variable" / "Add multiple variables" on the right side to add one or more tags. Choose an proper adapter that is activated and select a tag provided by that adapter.
 
 ![data_service_assets](graphics/Data_Service_Assets.PNG)
 
-Choose an proper adapter that is activated and select a tag provided by that adapter.
+Using the **variables preview**, you can immediately check whether data is transmitted from the IE Databus:
 
-![data_service_variable](graphics/Data_Service_Variable.PNG)
+![data_service_assets](graphics/Data_Service_Preview.PNG)
 
-To change the storage time period, klick on the link below the asset:
+The **data storage period** can be set individually for each asset. The data is deleted from the memory after this time.
+To change the this time period, klick on the link below the asset:
 
 ![data_service_retention](graphics/Data_Service_Retention.PNG)
 
 ### Configure an aspect
+
+An aspect is a mechanism for data modeling of assets. Aspects group related data points (topics) based on their logical assignment.
 
 Choose the register "Aspects" to create a new aspect by clicking "Create first aspect" or "Add aspect".
 
