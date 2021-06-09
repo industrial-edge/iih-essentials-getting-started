@@ -80,19 +80,21 @@ The adapter (here SIMATIC S7 Connector) should now be activated and connected to
 
 ### Configure an asset with variables
 
+An asset is a digital representation of a machine or automation system with one or more automation units (e.g. PLC). The data that describes an asset is collected and transferred. The data is then made available for further processing and evaluation.
+
 On the left bar click the icon "Assets & Connectivity". For the "edge" asset you can add child assets as needed. Click "Create first variable" or "Add variable" / "Add multiple variables" on the right side to add one or more tags. Choose an proper adapter that is activated and select a tag provided by that adapter.
 
 ![data_service_assets](graphics/Data_Service_Assets.PNG)
 
-Add tags:
+![data_service_variable](graphics/Data_Service_Variable.PNG)![data_service_multiple variables](graphics/Data_Service_MultipleVariables.PNG)
 
-![data_service_variable](graphics/Data_Service_Variable.PNG)    ![data_service_multiple variables](graphics/Data_Service_MultipleVariables.PNG)
-
-To change the storage time period, klick on the link below the asset:
+To change the storage time period, klick on the link below the asset to set the time:
 
 ![data_service_retention](graphics/Data_Service_Retention.PNG)
 
 ### Configure an aspect
+
+An aspect is a mechanism for data modeling of assets. Aspects group related data points (topics) based on their logical assignment.
 
 Choose the register "Aspects" to create a new aspect by clicking "Create first aspect" or "Add aspect".
 
