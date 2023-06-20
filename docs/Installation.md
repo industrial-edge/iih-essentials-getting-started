@@ -3,7 +3,7 @@
 - [Configuration](#configuration)
   - [Configure PLC Connection](#configure-plc-connection)
     - [Configure Databus](#configure-databus)
-    - [Configure S7 Connector](#configure-s7-connector)
+    - [Configure OPC UA Connector](#configure-opc-ua-connector)
   - [Configure Data Service](#configure-data-service)
     - [Configure the adapter](#configure-the-adapter)
     - [Configure an asset with variables](#configure-an-asset-with-variables)
@@ -11,12 +11,12 @@
 
 ## Configure PLC Connection
 
-To read data from the PLC and provide the data, we will use S7 Connector to establish connection with the PLC via OPC UA.
-The S7 Connector sends the data to the Databus, where the Data Service app can collect what is needed.
+To read data from the PLC and provide the data, we will use OPC UA Connector to establish connection with the PLC via OPC UA.
+The OPC UA Connector sends the data to the Databus, where the Data Service app can collect what is needed.
 In order to build this infrastructure, these apps must be configured properly:
 
 - Databus
-- S7 Connector
+- OPC UA Connector
 
 ### Configure Databus
 
@@ -31,9 +31,9 @@ Add a user with this topic:
 
 Deploy the configuration.
 
-### Configure S7 Connector
+### Configure OPC UA Connector
 
-In your IEM open the S7 Connector and launch the configurator.
+In your IEM open the OPC UA Connector and launch the configurator.
 
 Add a data source:
 
@@ -49,7 +49,7 @@ Edit the settings:
 
 Hint: Username and password should be the same for all system apps, e.g. "edge" / "edge".
 
-Hint: V1.2 only supports "bulk publish" anymore.
+Hint: V1.2 only supports "bulk publish".
 
 Deploy and start the project.
 
@@ -59,10 +59,11 @@ In your IED Web UI open the app Data Service.
 
 ### Configure the adapter
 
-Click the icon "Adapters" on the left bar. The Data Service provides adapters for the following connectors:
+Click the icon "Connectors" on the left bar. The Data Service provides adapters for the following connectors:
 
 - Ethernet IP Connector (MQTT)
 - Modbus TCP Connector (MQTT)
+- OPC UA Connector(MQTT)
 - Profinet IO Connector (MQTT)
 - SIMATIC S7 Connector (MQTT)
 - Hmi Runtime (Open Pipe Path)
@@ -70,7 +71,7 @@ Click the icon "Adapters" on the left bar. The Data Service provides adapters fo
 
 The adapter **"System Info"** is predefined and offers different variables, e.g. TotalHeapSize, TotalAvailableSize, UsedHeapSize, WriteQueueLength, WriteQueueValueCount, WriteSpeed, WriteInsertCount, WriteRequestCount, DatabaseSize. It is also possible to add a **self-developed** adapters by choosing the "plus" icon. This adapter must be based on the MQTT protocol.
 
-To connect to an adapter choose the adapter you want to use. Click the edit icon on the right to open the adapter configuration. The Broker URL should be prefilled with `"tcp://ie-databus:1883"`. Add the missing entries for username and password (again "edge"/"edge"). Set the status to 'Active' and save your configuration.
+To connect to an adapter choose the adapter you want to use. Click the edit icon on the right to open the adapter configuration. The Broker URL should be prefilled with `"tcp://ie-databus:1883"`. Deactivate the field `Use databus settings` and add the missing entries for username and password (again "edge"/"edge"). Make sure to check the box for password to enable inputting the password in the textbox. Set the status to 'Active' and save your configuration.
 
 ![data_service_adapter_config](graphics/Data_Service_Adapter_Config.png)
 
