@@ -87,7 +87,7 @@ On the left bar click the icon "Assets & Connectivity". For the "edge" asset you
 
 ![data_service_assets](graphics/Data_Service_Assets.PNG)
 
-Using the **variables preview**, you can immediately check whether data is transmitted from the IE Databus:
+Using the **variables preview**, you can immediately check whether data is transmitted from the Databus:
 
 ![data_service_assets](graphics/Data_Service_Preview.PNG)
 
