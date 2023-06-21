@@ -75,7 +75,7 @@ To connect to an adapter choose the adapter you want to use. Click the edit icon
 
 ![data_service_adapter_config](graphics/Data_Service_Adapter_Config.png)
 
-The adapter (here SIMATIC S7 Connector) should now be activated and connected to the Data Service.
+The adapter (here OPC UA Connector) should now be activated and connected to the Data Service.
 
 ![data_service_adapter](graphics/Data_Service_Adapter.png)
 
