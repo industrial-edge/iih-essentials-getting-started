@@ -106,9 +106,9 @@ An Aspect is a mechanism for data modeling of Assets. Aspects group related data
 
 Choose the register "Aspects" to create a new Aspect by clicking "Create first Aspect" or "Add Aspect".
 
-<p><kbd><img src="graphics/Data_Service_Aspect.PNG"/></kbd></p>
+<p><kbd><img src="graphics/iihessentials_addaspect.png"/></kbd></p>
 
 Hint: An Aspect can include several variables, but each variable can only be assigned to one Aspect.
 
-<p><kbd><img src="graphics/Data_Service_Aspects.PNG"/></kbd></p>
+<p><kbd><img src="graphics/iihessentials_aspects.png"/></kbd></p>
 
