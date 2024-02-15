@@ -1,6 +1,6 @@
 # IIH Essentials application example
 
-This example shows how to use the Industrial Edge App "IIH Essentials" to model and store data.
+This example shows how to use the Industrial Edge App "IIH Essentials" for data modelling and stooring data.
 
 - [IIH Essentials application example](#iih-essentials-application-example)
   - [Description](#description)
@@ -21,21 +21,16 @@ This example shows how to use the Industrial Edge App "IIH Essentials" to model 
 
 ### Overview
 
-This document describes how to get the data from a PLC into the app IIH Essentials, prepare the data and store the timeseries for further usage.
-A properly configured IIH Essentials is the basis for using other Industrial Edge Apps (e.g. Performance Insight or Notifier).
+This document describes the process of retrieving data from a PLC and integrating it into IIH Essentials application. It also covers data modelling and storage as time-series data for further usage.
+IIH Essentials is the foundation for leveraging additional Industrial Edge Apps such as Performance Insight or Notifier.
 
 ![overview](docs/graphics/Overview.PNG)
 
 ### General task
 
-The example reads data from a PLC via the OPC UA Connector.
-The data is published on Databus, where the IIH Essentials can collect the needed shopfloor data.
-First an adapter for providing the datapoints must be assigned and configured.
-Afterwards the data structure can be modeled using assets and aspects.
-Assets are used to structure the plant in logical units.
-Within an asset you can create variables and link them to the appropriate datapoints, which are made available by the configured adapter.
-This data is collected, saved for individual time period and transfered for further processing.
-By creating an aspect, variables can be grouped to a logical unit.
+This examples retrieves data from a PLC through the OPC UA Connector, publishing it on the Databus for IIH Essentials to gather essential shop floor data.   
+After connecting IIH Essentials to Databus the incomming data is modeled using Assets and Aspect. An Asset model allows you to create a digital representation of your machine or automation system.   
+The data is collected, stored in a database for a specific time period and made accessible via a REST-API for further processing. 
 
 ## Requirements
 
@@ -43,16 +38,18 @@ By creating an aspect, variables can be grouped to a logical unit.
 
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industial Edge Device on IEM
-- Installed System Configurators for Databus and OPC UA Connector
-- Installed System Apps Databus and OPC UA Connector
-- Installed IIH Essentials
+- Installed Configurators for Databus and OPC UA Connector
+- Installed Apps on IED:
+  -  Databus
+  -  OPC UA Connector
+  -  IIH Essentials
 - Edge device is connected to PLC
 - TIA portal project loaded on PLC
 - HTML5-capable Internet browser
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.5.2-4 / V1.11.8
+- Industrial Edge Management (IEM) V1.16.11
   - Databus V2.3.2-5
   - Databus Configurator V2.3.2-2
   - OPC UA Connector V2.x.x
@@ -74,8 +71,8 @@ You can find the further information about the following steps in the [docs](doc
 
 ## Usage
 
-Once the IIH Essentials app is configured and data is availalbe from a running PLC, process data can be collected.
-Now the data can be used to feed other apps like Performance Insight or Notifier.
+Once the IIH Essentials app is configured and data is availalbe from a running PLC, process data is collected.
+Now the data can be retrieved via a REST-API by appsl like Performance Insight or Notifier.
 
 ## Documentation
 

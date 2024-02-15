@@ -11,54 +11,50 @@
 
 ## Configure PLC Connection
 
-To read and provide data from the PLC, we will use OPC UA Connector to establish connection with the PLC via OPC UA.
-The OPC UA Connector sends the data to the Databus, where the IIH Essentials app can collect what is needed.
-In order to build this infrastructure, these apps must be configured properly:
+To retrieves data from a PLC with OPC UA Server and provide it for Edge Applications we will use the OPC UA Connector. The OPC UA Connector establishes a connection to the PLC via the OPC UA protocol and publishes data to Databus, where IIH Essentials gathers the required data. 
+In order to setup IIH Essentials, first these apps must be configured properly:
 
 - Databus
 - OPC UA Connector
 
 ### Configure Databus
 
-In your IEM go to Data Connections and launch the Databus configurator.
-
-Create a user and grant permission to access topic. For example:
-
-- Username: `edge`
-- Password: `edge`
-- Topic name: `ie/#`
-- Permission: `Publish and Subscribe`
+1. In your `IEM` go to `Data Connections` and launch the `Databus configurator`.
+2. Create a user and grant permission to access topic. For example:
+   - Username: `edge`
+   - Password: `edge`
+   - Topic name: `ie/#`
+   - Permission: `Publish and Subscribe`
 
 <p><kbd><img src="graphics/IE_Databus_User.PNG"/></kbd></p>
 
 <p><kbd><img src="graphics/IE_Databus.PNG"/></kbd></p>
 
-Deploy the configuration.
+3. Deploy the configuration.
 
 ### Configure OPC UA Connector
 
-In your IEM go to Data Connections and launch the OPC UA Connector configurator.
-
-Add a data source:
+1. In your `IEM` go to `Data Connections` and launch the `OPC UA Connector configurator`.
+2. Add a data source:
 
 <p><kbd><img src="graphics/S7_Connector_Data_Source.PNG"/></kbd></p>
 
-Add needed tags:
+3. Add tags:
 
 <p><kbd><img src="graphics/opcuaconnector.png"/></kbd></p>
 
-- ProducedBottles: ns=3;s="GDB"."process"."numberProduced"
-- FaultyBottles: ns=3;s="GDB"."process"."numberFaulty"
-- TankLevel: ns=3;s="GDB"."signals"."tankSignals"."actLevel"	
-- TankTemperature: ns=3;s="GDB"."signals"."tankSignals"."actTemperature"	
+   - ProducedBottles: ns=3;s="GDB"."process"."numberProduced"
+   - FaultyBottles: ns=3;s="GDB"."process"."numberFaulty"
+   - TankLevel: ns=3;s="GDB"."signals"."tankSignals"."actLevel"	
+   - TankTemperature: ns=3;s="GDB"."signals"."tankSignals"."actTemperature"	
 
-Edit settings:
+4. Configure settings:
 
 <p><kbd><img src="graphics/opcuaconnector_settings.png"/></kbd></p>
 
 Hint: Enter username and password of user created in Databus Configurator.
 
-Deploy project.
+5. Deploy project.
 
 ## Configure IIH Essentials
 
@@ -66,17 +62,15 @@ In your IED Web UI open the app IIH Essentials.
 
 ### Configure the adapter
 
-Click on the icon "Settings" on the left sidebar. Then open "Databus Settings" and Enter username and password of user created in Databus Configurator.
+1. Click on the icon `Settings` on the left sidebar. Then open `Databus Settings` and enter username and password of user created in Databus Configurator.
 
 <p><kbd><img src="graphics/iihessentials_databus_settings.png"/></kbd></p>
 
-Click on the icon "Connectors" on the left sidebar. To add a connector click on the plus icon. IIH Essentials discovers automatically all available connectors. In this case OPC UA Connector is shown. 
+2. Click on the icon `Connectors` on the left sidebar. To add a connector click on the `plus` icon. IIH Essentials discovers automatically all available connectors. In this case OPC UA Connector is shown. 
 
 <p><kbd><img src="graphics/iihessentials_addconnector.png"/></kbd></p>
 
-
-
-To use the connector click on "Add". The connector must now be activated. Therfore select this connector and click on edit, set status to activated and save
+3. To use the connector click on `Add`. After that the connector must be activated. Therfore select this connector and click on `edit`, set status to activated and save
 
 <p><kbd><img src="graphics/iihessentials_opcuaconnector.png"/></kbd></p>
 
@@ -88,7 +82,8 @@ The connector (here OPC UA Connector) is now activated and connected to the IIH 
 
 An Asset is a digital representation of a machine or automation system with one or more automation units (e.g. PLC). The data that describes an Asset is collected and transferred. The data is then made available for further processing and evaluation.
 
-On the left sidebar click the icon "Assets & Connectivity". For the "edge" Asset you can add child Assets as needed. Click "Create first variable" or "Add variable" on the right side to add one or more tags. Choose OPC UA Connector that is activated and select a tag provided by that adapter.
+1. On the left sidebar click the icon `Assets & Connectivity`. For the "edge" Asset you can add child Assets as needed. Click `Create first variable` or `Add variable` on the right side to add one or more tags. 
+2. Choose OPC UA Connector that is activated and select a tag provided by that adapter.
 
 <p><kbd><img src="graphics/iihessentials_addvariable.png"/></kbd></p>
 
