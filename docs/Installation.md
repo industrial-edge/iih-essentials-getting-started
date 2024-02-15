@@ -4,15 +4,15 @@
   - [Configure PLC Connection](#configure-plc-connection)
     - [Configure Databus](#configure-databus)
     - [Configure OPC UA Connector](#configure-opc-ua-connector)
-  - [Configure Data Service](#configure-data-service)
+  - [Configure IIH Essentials](#configure-iih-essentials)
     - [Configure the adapter](#configure-the-adapter)
     - [Configure an asset with variables](#configure-an-asset-with-variables)
     - [Configure an aspect](#configure-an-aspect)
 
 ## Configure PLC Connection
 
-To read data from the PLC and provide the data, we will use OPC UA Connector to establish connection with the PLC via OPC UA.
-The OPC UA Connector sends the data to the Databus, where the Data Service app can collect what is needed.
+To read and provide data from the PLC, we will use OPC UA Connector to establish connection with the PLC via OPC UA.
+The OPC UA Connector sends the data to the Databus, where the IIH Essentials app can collect what is needed.
 In order to build this infrastructure, these apps must be configured properly:
 
 - Databus
@@ -24,6 +24,8 @@ In your IEM open the Databus and launch the configurator.
 
 Add a user with this topic:
 `"ie/#"`
+
+<p align="center"><kbd><img src="graphics/IE_Databus_User.PNG"/></kbd></p>
 
 ![ie_databus_user](graphics/IE_Databus_User.PNG)
 
@@ -53,13 +55,13 @@ Hint: V1.2 only supports "bulk publish".
 
 Deploy and start the project.
 
-## Configure Data Service
+## Configure IIH Essentials
 
-In your IED Web UI open the app Data Service.
+In your IED Web UI open the app IIH Essentials.
 
 ### Configure the adapter
 
-Click the icon "Connectors" on the left bar. The Data Service provides adapters for the following connectors:
+Click the icon "Connectors" on the left bar. The IIH Essentials provides adapters for the following connectors:
 
 - Ethernet IP Connector (MQTT)
 - Modbus TCP Connector (MQTT)
@@ -75,7 +77,7 @@ To connect to an adapter choose the adapter you want to use. Click the edit icon
 
 ![data_service_adapter_config](graphics/Data_Service_Adapter_Config.png)
 
-The adapter (here OPC UA Connector) should now be activated and connected to the Data Service.
+The adapter (here OPC UA Connector) should now be activated and connected to the IIH Essentials.
 
 ![data_service_adapter](graphics/Data_Service_Adapter.png)
 
