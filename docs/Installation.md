@@ -7,7 +7,7 @@
   - [Configure IIH Essentials](#configure-iih-essentials)
     - [Configure the adapter](#configure-the-adapter)
     - [Configure an Asset with variables](#configure-an-asset-with-variables)
-    - [Configure an aspect](#configure-an-aspect)
+    - [Configure an Aspect](#configure-an-aspect)
 
 ## Configure PLC Connection
 
@@ -83,7 +83,7 @@ The connector (here OPC UA Connector) is now activated and connected to the IIH 
 An Asset is a digital representation of a machine or automation system with one or more automation units (e.g. PLC). The data that describes an Asset is collected and transferred. The data is then made available for further processing and evaluation.
 
 1. On the left sidebar click the icon `Assets & Connectivity`. For the "edge" Asset you can add child Assets as needed. Click `Create first variable` or `Add variable` on the right side to add one or more tags. 
-2. Choose OPC UA Connector that is activated and select a tag provided by that adapter.
+2. Choose OPC UA Connector and select one or multiple tags.
 
 <p><kbd><img src="graphics/iihessentials_addvariable.png"/></kbd></p>
 
@@ -100,15 +100,15 @@ To change the this time period, click on the edit next to the name of the Asset:
 
 <p><kbd><img src="graphics/Data_Service_Retention.PNG"/></kbd></p>
 
-### Configure an aspect
+### Configure an Aspect
 
-An aspect is a mechanism for data modeling of Assets. Aspects group related data points (topics) based on their logical assignment.
+An Aspect is a mechanism for data modeling of Assets. Aspects group related data points (topics) based on their logical assignment.
 
-Choose the register "Aspects" to create a new aspect by clicking "Create first aspect" or "Add aspect".
+Choose the register "Aspects" to create a new Aspect by clicking "Create first Aspect" or "Add Aspect".
 
 <p><kbd><img src="graphics/Data_Service_Aspect.PNG"/></kbd></p>
 
-Hint: An aspect can include several variables, but each variable can only be assigned to one aspect.
+Hint: An Aspect can include several variables, but each variable can only be assigned to one Aspect.
 
 <p><kbd><img src="graphics/Data_Service_Aspects.PNG"/></kbd></p>
 
