@@ -24,7 +24,7 @@ This example shows how to use the Industrial Edge App "IIH Essentials" for data 
 This document describes the process of retrieving data from a PLC and integrating it into IIH Essentials application. It also covers data modelling and storage as time-series data for further usage.
 IIH Essentials is the foundation for leveraging additional Industrial Edge Apps such as Performance Insight or Notifier.
 
-![overview](docs/graphics/Overview.PNG)
+![overview](docs/graphics/overview.png)
 
 ### General task
 
