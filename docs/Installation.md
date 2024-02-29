@@ -5,7 +5,7 @@
     - [Configure Databus](#configure-databus)
     - [Configure OPC UA Connector](#configure-opc-ua-connector)
   - [Configure IIH Essentials](#configure-iih-essentials)
-    - [Configure the adapter](#configure-the-adapter)
+    - [Configure Connector](#configure-connector)
     - [Configure an Asset with variables](#configure-an-asset-with-variables)
     - [Configure an Aspect](#configure-an-aspect)
 
@@ -60,7 +60,7 @@ Hint: Enter username and password of user created in Databus Configurator.
 
 In your IED Web UI open the app IIH Essentials.
 
-### Configure the adapter
+### Configure Connector
 
 1. Click on the icon `Settings` on the left sidebar. Then open `Databus Settings` and enter username and password of user created in Databus Configurator.
 
@@ -70,7 +70,7 @@ In your IED Web UI open the app IIH Essentials.
 
 <p><kbd><img src="graphics/iihessentials_addconnector.png"/></kbd></p>
 
-3. To use the connector click on `Add`. After that the connector must be activated. Therfore select this connector and click on `edit`, set status to activated and save
+3. To use the connector click on `Add`. After that the connector must be activated. Therefore select this connector and click on `edit`, set `status` to active and save.
 
 <p><kbd><img src="graphics/iihessentials_opcuaconnector.png"/></kbd></p>
 
@@ -80,7 +80,7 @@ The connector (here OPC UA Connector) is now activated and connected to the IIH 
 
 ### Configure an Asset with variables
 
-An Asset is a digital representation of a machine or automation system with one or more automation units (e.g. PLC). The data that describes an Asset is collected and transferred. The data is then made available for further processing and evaluation.
+An Asset is a digital representation of a machine or automation system with one or more automation units (e.g. PLC). The data that describes an Asset is collected and stored. The data is then made available for further processing and evaluation.
 
 1. On the left sidebar click the icon `Assets & Connectivity`. For the "edge" Asset you can add child Assets as needed. Click `Create first variable` or `Add variable` on the right side to add one or more tags. 
 2. Choose OPC UA Connector and select one or multiple tags.
@@ -91,20 +91,20 @@ After adding all variables it looks as following
 
 <p><kbd><img src="graphics/Data_Service_Assets.PNG"/></kbd></p>
 
-Using the **variables preview**, you can immediately check whether data is transmitted from the Databus:
+Using the **variables preview**, you can immediately check whether data is received from Databus:
 
 <p><kbd><img src="graphics/Data_Service_Preview.PNG"/></kbd></p>
 
 The **data storage period** can be set individually for each Asset. The data is deleted from the disk after this time.
-To change the this time period, click on the edit next to the name of the Asset:
+To change the this time period, click on edit next to the name of the Asset:
 
 <p><kbd><img src="graphics/Data_Service_Retention.PNG"/></kbd></p>
 
 ### Configure an Aspect
 
-An Aspect is a mechanism for data modeling of Assets. Aspects group related data points (topics) based on their logical assignment.
+An Aspect is a mechanism for data modeling of Assets. Aspects group related variables (tags) based on their logical assignment.
 
-Choose the register "Aspects" to create a new Aspect by clicking "Create first Aspect" or "Add Aspect".
+Choose the register `Aspects` to create a new Aspect by clicking `Create first Aspect` or `Add Aspect`.
 
 <p><kbd><img src="graphics/iihessentials_addaspect.png"/></kbd></p>
 

@@ -72,7 +72,7 @@ You can find the further information about the following steps in the [docs](doc
 ## Usage
 
 Once the IIH Essentials app is configured and data is availalbe from a running PLC, process data is collected.
-Now the data can be retrieved via a REST-API by appsl like Performance Insight or Notifier.
+Now the data can be retrieved via a REST-API by apps like Performance Insight or Notifier.
 
 ## Documentation
 
@@ -83,7 +83,7 @@ You can find further documentation and help in the following links
 - [Industrial Edge Documentation](https://docs.industrial-edge.siemens.cloud/)
 - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
 - [Industrial Edge GitHub page](https://github.com/industrial-edge)
-- 
+   
 ## Contribution
 
 Thank you for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section.
