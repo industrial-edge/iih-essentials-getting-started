@@ -4,106 +4,111 @@
   - [Configure PLC Connection](#configure-plc-connection)
     - [Configure Databus](#configure-databus)
     - [Configure OPC UA Connector](#configure-opc-ua-connector)
-  - [Configure Data Service](#configure-data-service)
-    - [Configure the adapter](#configure-the-adapter)
-    - [Configure an asset with variables](#configure-an-asset-with-variables)
-    - [Configure an aspect](#configure-an-aspect)
+  - [Configure IIH Essentials](#configure-iih-essentials)
+    - [Configure Connector](#configure-connector)
+    - [Configure an Asset with variables](#configure-an-asset-with-variables)
+    - [Configure an Aspect](#configure-an-aspect)
 
 ## Configure PLC Connection
 
-To read data from the PLC and provide the data, we will use OPC UA Connector to establish connection with the PLC via OPC UA.
-The OPC UA Connector sends the data to the Databus, where the Data Service app can collect what is needed.
-In order to build this infrastructure, these apps must be configured properly:
+We will use the OPC UA Connector to retrieve data from a PLC with OPC UA Server and provide the data to Edge Applications. The OPC UA Connector establishes a connection to the PLC via the OPC UA protocol and publishes data to Databus, where IIH Essentials gathers the required data. 
+In order to setup IIH Essentials, first these apps must be configured properly:
 
 - Databus
 - OPC UA Connector
 
 ### Configure Databus
 
-In your IEM open the Databus and launch the configurator.
+1. In your `IEM` go to `Data Connections` and launch the `Databus configurator`.
+2. Create a user and grant permission to access topic. For example:
+   - Username: `edge`
+   - Password: `edge`
+   - Topic name: `ie/#`
+   - Permission: `Publish and Subscribe`
 
-Add a user with this topic:
-`"ie/#"`
+<p><kbd><img src="graphics/IE_Databus_User.PNG"/></kbd></p>
 
-![ie_databus_user](graphics/IE_Databus_User.PNG)
+<p><kbd><img src="graphics/IE_Databus.PNG"/></kbd></p>
 
-![ie_databus](graphics/IE_Databus.PNG)
-
-Deploy the configuration.
+3. Deploy the configuration.
 
 ### Configure OPC UA Connector
 
-In your IEM open the OPC UA Connector and launch the configurator.
+1. In your `IEM` go to `Data Connections` and launch the `OPC UA Connector configurator`.
+2. Add a data source:
 
-Add a data source:
+<p><kbd><img src="graphics/S7_Connector_Data_Source.PNG"/></kbd></p>
 
-![S7 Connector Data Source](graphics/S7_Connector_Data_Source.PNG)
+3. Add tags:
 
-Add needed tags:
+<p><kbd><img src="graphics/opcuaconnector.png"/></kbd></p>
 
-![s7_connector_config](graphics/S7_Connector_Configuration.PNG)
+   - ProducedBottles: ns=3;s="GDB"."process"."numberProduced"
+   - FaultyBottles: ns=3;s="GDB"."process"."numberFaulty"
+   - TankLevel: ns=3;s="GDB"."signals"."tankSignals"."actLevel"	
+   - TankTemperature: ns=3;s="GDB"."signals"."tankSignals"."actTemperature"	
 
-Edit the settings:
+4. Configure settings:
 
-![s7_connector_settings](graphics/S7_Connector_Settings.PNG)
+<p><kbd><img src="graphics/opcuaconnector_settings.png"/></kbd></p>
 
-Hint: Username and password should be the same for all system apps, e.g. "edge" / "edge".
+Hint: Enter username and password of user created in Databus Configurator.
 
-Hint: V1.2 only supports "bulk publish".
+5. Deploy project.
 
-Deploy and start the project.
+## Configure IIH Essentials
 
-## Configure Data Service
+In your IED Web UI open the app IIH Essentials.
 
-In your IED Web UI open the app Data Service.
+### Configure Connector
 
-### Configure the adapter
+1. Click on the icon `Settings` on the left sidebar. Then open `Databus Settings` and enter username and password of user created in Databus Configurator.
 
-Click the icon "Connectors" on the left bar. The Data Service provides adapters for the following connectors:
+<p><kbd><img src="graphics/iihessentials_databus_settings.png"/></kbd></p>
 
-- Ethernet IP Connector (MQTT)
-- Modbus TCP Connector (MQTT)
-- OPC UA Connector(MQTT)
-- Profinet IO Connector (MQTT)
-- SIMATIC S7 Connector (MQTT)
-- Hmi Runtime (Open Pipe Path)
-- System Info (MQTT)
+2. Click on the icon `Connectors` on the left sidebar. To add a connector click on the `plus` icon. IIH Essentials discovers automatically all available connectors. In this case OPC UA Connector is shown. 
 
-The adapter **"System Info"** is predefined and offers different variables, e.g. TotalHeapSize, TotalAvailableSize, UsedHeapSize, WriteQueueLength, WriteQueueValueCount, WriteSpeed, WriteInsertCount, WriteRequestCount, DatabaseSize. It is also possible to add a **self-developed** adapters by choosing the "plus" icon. This adapter must be based on the MQTT protocol.
+<p><kbd><img src="graphics/iihessentials_addconnector.png"/></kbd></p>
 
-To connect to an adapter choose the adapter you want to use. Click the edit icon on the right to open the adapter configuration. The Broker URL should be prefilled with `"tcp://ie-databus:1883"`. Deactivate the field `Use databus settings` and add the missing entries for username and password (again "edge"/"edge"). Make sure to check the box for password to enable inputting the password in the textbox. Set the status to 'Active' and save your configuration.
+3. To use the connector click on `Add`. After that the connector must be activated. Therefore select this connector and click on `edit`, set `status` to active and save.
 
-![data_service_adapter_config](graphics/Data_Service_Adapter_Config.png)
+<p><kbd><img src="graphics/iihessentials_opcuaconnector.png"/></kbd></p>
 
-The adapter (here OPC UA Connector) should now be activated and connected to the Data Service.
+The connector (here OPC UA Connector) is now activated and connected to the IIH Essentials.
 
-![data_service_adapter](graphics/Data_Service_Adapter.png)
+<p><kbd><img src="graphics/iihessentials_opcuaconnector_status.png"/></kbd></p>
 
-### Configure an asset with variables
+### Configure an Asset with variables
 
-An asset is a digital representation of a machine or automation system with one or more automation units (e.g. PLC). The data that describes an asset is collected and transferred. The data is then made available for further processing and evaluation.
+An Asset is a digital representation of a machine or automation system with one or more automation units (e.g. PLC). The data that describes an Asset is collected and stored. The data is then made available for further processing and evaluation.
 
-On the left bar click the icon "Assets & Connectivity". For the "edge" asset you can add child assets as needed. Click "Create first variable" or "Add variable" / "Add multiple variables" on the right side to add one or more tags. Choose an proper adapter that is activated and select a tag provided by that adapter.
+1. On the left sidebar click the icon `Assets & Connectivity`. For the "edge" Asset you can add child Assets as needed. Click `Create first variable` or `Add variable` on the right side to add one or more tags. 
+2. Choose OPC UA Connector and select one or multiple tags.
 
-![data_service_assets](graphics/Data_Service_Assets.PNG)
+<p><kbd><img src="graphics/iihessentials_addvariable.png"/></kbd></p>
 
-Using the **variables preview**, you can immediately check whether data is transmitted from the Databus:
+After adding all variables it looks as following
 
-![data_service_assets](graphics/Data_Service_Preview.PNG)
+<p><kbd><img src="graphics/Data_Service_Assets.PNG"/></kbd></p>
 
-The **data storage period** can be set individually for each asset. The data is deleted from the memory after this time.
-To change the this time period, klick on the link below the asset:
+Using the **variables preview**, you can immediately check whether data is received from Databus:
 
-![data_service_retention](graphics/Data_Service_Retention.PNG)
+<p><kbd><img src="graphics/Data_Service_Preview.PNG"/></kbd></p>
 
-### Configure an aspect
+The **data storage period** can be set individually for each Asset. The data is deleted from the disk after this time.
+To change the this time period, click on edit next to the name of the Asset:
 
-An aspect is a mechanism for data modeling of assets. Aspects group related data points (topics) based on their logical assignment.
+<p><kbd><img src="graphics/Data_Service_Retention.PNG"/></kbd></p>
 
-Choose the register "Aspects" to create a new aspect by clicking "Create first aspect" or "Add aspect".
+### Configure an Aspect
 
-![data_service_aspect](graphics/Data_Service_Aspect.PNG)
+An Aspect is a mechanism for data modeling of Assets. Aspects group related variables (tags) based on their logical assignment.
 
-Hint: An aspect can include several variables, but each variable can only be assigned to one aspect.
+Choose the register `Aspects` on the created Asset to create a new Aspect by clicking `Create first Aspect` or `Add Aspect`.
 
-![data_service_aspects](graphics/Data_Service_Aspects.PNG)
+<p><kbd><img src="graphics/iihessentials_addaspect.png"/></kbd></p>
+
+Hint: An Aspect can include several variables, but each variable can only be assigned to one Aspect.
+
+<p><kbd><img src="graphics/iihessentials_aspects.png"/></kbd></p>
+
