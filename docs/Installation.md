@@ -11,7 +11,7 @@
 
 ## Configure PLC Connection
 
-To retrieves data from a PLC with OPC UA Server and provide it for Edge Applications we will use the OPC UA Connector. The OPC UA Connector establishes a connection to the PLC via the OPC UA protocol and publishes data to Databus, where IIH Essentials gathers the required data. 
+We will use the OPC UA Connector to retrieve data from a PLC with OPC UA Server and provide the data to Edge Applications. The OPC UA Connector establishes a connection to the PLC via the OPC UA protocol and publishes data to Databus, where IIH Essentials gathers the required data. 
 In order to setup IIH Essentials, first these apps must be configured properly:
 
 - Databus
@@ -104,7 +104,7 @@ To change the this time period, click on edit next to the name of the Asset:
 
 An Aspect is a mechanism for data modeling of Assets. Aspects group related variables (tags) based on their logical assignment.
 
-Choose the register `Aspects` to create a new Aspect by clicking `Create first Aspect` or `Add Aspect`.
+Choose the register `Aspects` on the created Asset to create a new Aspect by clicking `Create first Aspect` or `Add Aspect`.
 
 <p><kbd><img src="graphics/iihessentials_addaspect.png"/></kbd></p>
 

@@ -71,8 +71,8 @@ You can find the further information about the following steps in the [docs](doc
 
 ## Usage
 
-Once the IIH Essentials app is configured and data is availalbe from a running PLC, process data is collected.
-Now the data can be retrieved via a REST-API by apps like Performance Insight or Notifier.
+Once the IIH Essentials app is configured and data is available from a running PLC, process data is collected.
+Now the data can be retrieved via REST-API by apps like Performance Insight or Notifier.
 
 ## Documentation
 
