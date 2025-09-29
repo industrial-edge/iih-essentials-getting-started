@@ -50,14 +50,13 @@ The data is collected, stored in a database for a specific time period and made 
 ### Used components
 
 - Industrial Edge Management (IEM) V1.16.11
-  - Databus V2.3.2-5
+  - Databus V3.2.3
   - Databus Configurator V2.3.2-2
-  - OPC UA Connector V2.x.x
-  - Common Connector Configurator V1.9.1-1
-  - IIH Essentials V1.10.x
-- Industrial Edge Device V1.12.0-3-a
-- TIA Portal V16
-- S7-PLCSIM Advanced V3.0
+  - OPC UA Connector V2.4.2
+  - Common Connector Configurator V2.3.0
+  - IIH Essentials V2.3.0
+- Industrial Edge Device V3.0.0-51
+- TIA Portal V19
 
 ### TIA Project
 
