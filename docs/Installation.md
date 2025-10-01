@@ -3,9 +3,9 @@
 - [Configuration](#configuration)
   - [Configure PLC Connection](#configure-plc-connection)
     - [Configure Databus](#configure-databus)
+    - [Databus Settings in IIH](#databus-settings-in-iih)
     - [Configure OPC UA Connector](#configure-opc-ua-connector)
   - [Configure IIH Essentials](#configure-iih-essentials)
-    - [Configure Connector](#configure-connector)
     - [Configure an Asset with variables](#configure-an-asset-with-variables)
     - [Configure an Aspect](#configure-an-aspect)
 
@@ -32,6 +32,16 @@ In order to setup IIH Essentials, first these apps must be configured properly:
 
 1. Deploy the configuration.
 
+### Databus Settings in IIH
+
+1. Click on the icon `Settings` on the left sidebar in Common Configurator. Under **Datbus credentials** enter username and password of user created in Databus Configurator.
+
+<p><kbd><img src="graphics/commonconfigurator_databus_settings.png"/></kbd></p>
+
+2. Go to `IIH Essentials>Settings> Databus settings` and enter the same credentials.
+
+<p><kbd><img src="graphics/iihessentials_databus_settings.png"/></kbd></p>
+
 ### Configure OPC UA Connector
 
 1. In your `IED` go to `Common Configurator > Get data` and select `OPC UA Connector`.
@@ -57,12 +67,6 @@ Configure the Aquisition Properties and click `Save for Import`and afterwards `A
 
 In your IED Web UI open the app IIH Essentials.
 
-### Configure Connector
-
-1. Click on the icon `Settings` on the left sidebar. Then open `Databus Settings` and enter username and password of user created in Databus Configurator.
-
-<p><kbd><img src="graphics/iihessentials_databus_settings.png"/></kbd></p>
-
 1. Click on the icon `Connectors` on the left sidebar. To add a connector click on the `plus` icon. IIH Essentials discovers automatically all available connectors. In this case OPC UA Connector is already shown. 
 
 <p><kbd><img src="graphics/iihessentials_opcuaconnector.png"/></kbd></p>
@@ -83,14 +87,14 @@ After adding all variables it looks as following
 
 <p><kbd><img src="graphics/result.png"/></kbd></p>
 
-Using the **variables preview**, you can immediately check whether data is received from Databus:
+Using the **variables preview**, you can immediately check whether data is received from Databus (The checkbox **Store** has to be selected):
 
 <p><kbd><img src="graphics/Data_Service_Preview.PNG"/></kbd></p>
 
 <p><kbd><img src="graphics/data_preview_graph.PNG"/></kbd></p>
 
 The **data storage period** can be set individually for each Asset. The data is deleted from the disk after this time.
-To change the this time period, click on edit next to the name of the Asset:
+To change the time period, click on the **Gear Icon** next to the name of the Asset:
 
 <p><kbd><img src="graphics/Data_Service_Retention.PNG"/></kbd></p>
 
@@ -102,7 +106,7 @@ Choose the register `Aspects` on the created Asset to create a new Aspect by cli
 
 <p><kbd><img src="graphics/iihessentials_addaspect.png"/></kbd></p>
 
-Hint: An Assets can have multiple Aspects/Assets for Children, but Aspects can only have Aspects for Children.
+Hint: An Assets can have multiple Aspects/Assets for Children, but Aspects can exclusively have Aspects for Children.
 
 <p><kbd><img src="graphics/iihessentials_aspects.png"/></kbd></p>
 
