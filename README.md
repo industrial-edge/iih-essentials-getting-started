@@ -38,26 +38,31 @@ The data is collected, stored in a database for a specific time period and made 
 
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industial Edge Device on IEM
-- Installed Configurators for Databus and OPC UA Connector
+- Installed Configurators for Databus and OPC UA Connector (IEM)
 - Installed Apps on IED:
   -  Databus
   -  OPC UA Connector
   -  IIH Essentials
+  -  Common Configurator
+  -  IIH Semantics
+  -  OPC UA Connector
+  -  Common Import Converter
 - Edge device is connected to PLC
 - TIA portal project loaded on PLC
 - HTML5-capable Internet browser
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.16.11
-  - Databus V2.3.2-5
-  - Databus Configurator V2.3.2-2
-  - OPC UA Connector V2.x.x
-  - Common Connector Configurator V1.9.1-1
-  - IIH Essentials V1.10.x
-- Industrial Edge Device V1.12.0-3-a
-- TIA Portal V16
-- S7-PLCSIM Advanced V3.0
+- Industrial Edge Management (IEM) V1.15.9
+- Industrial Edge Device V3.0.0-51
+- Databus Configurator V3.2.3
+- Common Connector Configurator V2.0.0
+- Common Configurator V2.3.0
+- Common Import Converter V3.0.0
+- Databus V3.2.3
+- IIH Semantics V2.3.0
+- OPC UA Connector V2.3.2-11
+- TIA Portal V19
 
 ### TIA Project
 
@@ -66,8 +71,8 @@ The used TIA Portal project can be found in the miscellaneous repository under "
 ## Configuration steps
 
 You can find the further information about the following steps in the [docs](docs/Installation.md)
-- Configure PLC Connection (Databus, OPC UA Connector)
-- Configure IIH Essentials
+- [Configure PLC Connection (Databus, OPC UA Connector)](docs/Installation.md#configure-plc-connection)
+- [Configure IIH Essentials](docs/Installation.md#configure-iih-essentials)
 
 ## Usage
 
@@ -79,7 +84,8 @@ Now the data can be retrieved via REST-API by apps like Performance Insight or N
 You can find further documentation and help in the following links
 
 - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
-- [Industrial Edge Forum](https://forum.industrial-edge.siemens.cloud)
+- [Industrial Edge Forum - Mendix](https://forum.industrial-edge.siemens.cloud)
+- [Industrial Edge Technical Forum - Sieportal](https://www.siemens.com/industrial-edge-forum)
 - [Industrial Edge Documentation](https://docs.industrial-edge.siemens.cloud/)
 - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
 - [Industrial Edge GitHub page](https://github.com/industrial-edge)
