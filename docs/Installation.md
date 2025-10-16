@@ -11,7 +11,7 @@
 
 ## Configure PLC Connection
 
-We will use the OPC UA Connector to retrieve data from a PLC with OPC UA Server and provide the data to Edge Applications. The OPC UA Connector establishes a connection to the PLC via the OPC UA protocol and publishes data to Databus, where IIH Essentials gathers the required data. 
+We will use the OPC UA Connector to retrieve data from a PLC with OPC UA Server and provide the data to Industrial Edge Applications. The OPC UA Connector establishes a connection to the PLC via the OPC UA protocol and publishes data to Databus, where IIH Essentials gathers the required data. 
 In order to setup IIH Essentials, first these apps must be configured properly:
 
 - Databus
@@ -110,3 +110,4 @@ Hint: An Assets can have multiple Aspects/Assets for Children, but Aspects can e
 
 <p><kbd><img src="graphics/iihessentials_aspects.png"/></kbd></p>
 
+Now you are ready to create your own Assets or incorporate additional Apps ([Performance Insights](https://github.com/industrial-edge/performance-insight-getting-started)).

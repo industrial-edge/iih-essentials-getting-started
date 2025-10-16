@@ -38,7 +38,7 @@ The data is collected, stored in a database for a specific time period and made 
 
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industial Edge Device on IEM
-- Installed Configurators for Databus and OPC UA Connector
+- Installed Configurators for Databus and OPC UA Connector (IEM)
 - Installed Apps on IED:
   -  Databus
   -  OPC UA Connector
@@ -71,8 +71,8 @@ The used TIA Portal project can be found in the miscellaneous repository under "
 ## Configuration steps
 
 You can find the further information about the following steps in the [docs](docs/Installation.md)
-- Configure PLC Connection (Databus, OPC UA Connector)
-- Configure IIH Essentials
+- [Configure PLC Connection (Databus, OPC UA Connector)](docs/Installation.md#configure-plc-connection)
+- [Configure IIH Essentials](docs/Installation.md#configure-iih-essentials)
 
 ## Usage
 
