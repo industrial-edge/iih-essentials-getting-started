@@ -36,7 +36,7 @@ In order to setup IIH Essentials, first these apps must be configured properly:
 
 1. Click on the icon `Settings` on the left sidebar in Common Configurator. Under **Datbus credentials** enter username and password of user created in Databus Configurator.
 
-<p><kbd><img src="graphics/commonconfigurator_databus_settings.png"/></kbd></p>
+<p><kbd><img src="graphics/Databus_Credentials_CC.png"/></kbd></p>
 
 2. Go to `IIH Essentials>Settings> Databus settings` and enter the same credentials. (If you already configured Databus Settings over Common Configurator, this step isn't needed)
 

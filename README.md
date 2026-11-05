@@ -41,28 +41,23 @@ The data is collected, stored in a database for a specific time period and made 
 - Installed Configurators for Databus and OPC UA Connector (IEM)
 - Installed Apps on IED:
   -  Databus
-  -  OPC UA Connector
+  -  OPC UA Connector or OPC UA High Performance Connector
   -  IIH Essentials
   -  Common Configurator
-  -  IIH Semantics
-  -  OPC UA Connector
-  -  Common Import Converter
 - Edge device is connected to PLC
 - TIA portal project loaded on PLC
 - HTML5-capable Internet browser
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.15.9
-- Industrial Edge Device V3.0.0-51
-- Databus Configurator V3.2.3
-- Common Connector Configurator V2.0.0
-- Common Configurator V2.3.0
-- Common Import Converter V3.0.0
-- Databus V3.2.3
-- IIH Semantics V2.3.0
-- OPC UA Connector V2.3.2-11
-- TIA Portal V19
+- Industrial Edge Management (IEM) V2.3.2
+- Industrial Edge Device V1.28.1-2-b
+- Databus Configurator V4.0.0
+- Common Configurator V2.6.0
+- Databus V4.0.0
+- IIH Essentials V2.6.0
+- OPC UA Connector V2.4.4 or OPC UA High Performance Connector v1.2.1
+- TIA Portal V21
 
 ### TIA Project
 
